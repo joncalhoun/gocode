@@ -1,1 +1,1 @@
-from .cmd import autocomplete, parse_func, Error
+from .gocode import autocomplete, parse_func, Error
