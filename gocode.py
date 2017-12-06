@@ -9,7 +9,6 @@ def autocomplete(position, source):
     ret = json.loads(out)
     return ret
 
-
 def parse_func(src):
     """
     parse_func is used to parse a Go function into pieces that are easier to use for autocompletion.
@@ -42,12 +41,10 @@ def parse_func(src):
     start = len("func")
     depth = 0
     for i in range(start, len(src)):
-        print("i=", i, " src[i]=", src[i])
         if src[i] == "(":
             depth += 1
         elif src[i] == ")":
             depth -= 1
-        print("depth=", depth)
         if depth == 0:
             return (parse_params(src[start:i+1]), src[i+1:].strip())
     raise Error("invalid function source: %s" % src)
