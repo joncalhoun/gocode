@@ -1,0 +1,3 @@
+[submodule "vendor/cmd"]
+	path = vendor/cmd
+	url = git@github.com:joncalhoun/cmd.git
